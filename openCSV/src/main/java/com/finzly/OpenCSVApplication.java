@@ -1,0 +1,23 @@
+package com.finzly;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class OpenCSVApplication {
+
+	public static String env;
+
+	public static void main(String[] args) {
+		SpringApplication.run(OpenCSVApplication.class, args);
+		env = args[0];
+		System.out.println(env);
+//	    env = System.getProperty("env");
+//
+//	   
+//		System.out.println(env);
+//		System.out.println(args[0]);
+//		OpenCSVService.prepare(args);
+	}
+
+}
