@@ -22,9 +22,6 @@ import com.opencsv.exceptions.CsvException;
 public class OpenCSVService {
 
 	@Autowired
-	private Environment env1;
-
-	@Autowired
 	OpenCSVApplication openCSVApplication;
 
 	public boolean isCsvfile(MultipartFile file) {
@@ -34,12 +31,9 @@ public class OpenCSVService {
 		return true;
 	}
 
-	private String path;
-
 	public ResponseEntity<String> uploadAndSaveCsv(MultipartFile file) {
 		try {
 			String script = csvParsing(file.getInputStream());
-			path = env1.getProperty("csv.file.path", "Not available");
 			return writeScriptToFile(script);
 
 		} catch (IOException e) {
@@ -59,13 +53,14 @@ public class OpenCSVService {
 			String col2 = headerNames[1];
 
 			String env = OpenCSVApplication.env;
+			String appName = OpenCSVApplication.appName;
 
 			List<String[]> record = reader.readAll();
 			for (String[] oneRecord : record) {
 				String value1 = oneRecord[0];
 				String value2 = oneRecord[1];
-				String query = "Insert into " + env + ".properties(" + col1 + "," + col2 + ") values('" + value1 + "','"
-						+ value2 + "')";
+				String query = "Insert into " + env + ".properties(" + col1 + "," + col2 + ") values('" + appName
+						+ "','" + value1 + "','" + value2 + "')";
 				script.append(query + "\n");
 			}
 			return script.toString();
@@ -77,7 +72,7 @@ public class OpenCSVService {
 	}
 
 	private ResponseEntity<String> writeScriptToFile(String script) {
-		try (FileWriter writer = new FileWriter(path)) {
+		try (FileWriter writer = new FileWriter("src/main/resources/insertData1.sql")) {
 			writer.write(script);
 			return ResponseEntity.status(HttpStatus.OK).body("Script appended successfully");
 		} catch (IOException e) {

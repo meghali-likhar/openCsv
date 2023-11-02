@@ -7,10 +7,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class OpenCSVApplication {
 
 	public static String env;
+	public static String appName;
 
 	public static void main(String[] args) {
 		SpringApplication.run(OpenCSVApplication.class, args);
 		env = args[0];
+		appName = args[1];
 	}
 
 }

@@ -1,0 +1,6 @@
+Insert into uat.properties(prop_key,value) values('APP_NAME','bankos.clientadapter.tenant.oceanfirstbank.sftp.request.file_dir','/From Finzly Dev/')
+Insert into uat.properties(prop_key,value) values('APP_NAME','bankos.clientadapter.tenant.oceanfirstbank.sftp.respone.file_dir','/To Finzly Dev/')
+Insert into uat.properties(prop_key,value) values('APP_NAME','bankos.clientadapter.tenant.oceanfirstbank.sftp.is_password_based_authentication','true')
+Insert into uat.properties(prop_key,value) values('APP_NAME','bankos.clientadapter.tenant.oceanfirstbank.s3.form.attachment.file_dir','/flow')
+Insert into uat.properties(prop_key,value) values('APP_NAME','bankos.clientadapter.tenant.oceanfirstbank.forms.api','${base.bank.url}/api/flow/forminstances/')
+Insert into uat.properties(prop_key,value) values('APP_NAME','bankos.clientadapter.tenant.oceanfirstbank.forms.response.api','${base.bank.url}/api/flow/forminstances/corestatusupdate/')
