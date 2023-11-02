@@ -1,6 +1,0 @@
-Insert into --spring.output.ansi.enabled=always.properties(prop_key,value) values(bankos.clientadapter.tenant.oceanfirstbank.sftp.request.file_dir,/From Finzly Dev/)
-Insert into --spring.output.ansi.enabled=always.properties(prop_key,value) values(bankos.clientadapter.tenant.oceanfirstbank.sftp.respone.file_dir,/To Finzly Dev/)
-Insert into --spring.output.ansi.enabled=always.properties(prop_key,value) values(bankos.clientadapter.tenant.oceanfirstbank.sftp.is_password_based_authentication,true)
-Insert into --spring.output.ansi.enabled=always.properties(prop_key,value) values(bankos.clientadapter.tenant.oceanfirstbank.s3.form.attachment.file_dir,/flow)
-Insert into --spring.output.ansi.enabled=always.properties(prop_key,value) values(bankos.clientadapter.tenant.oceanfirstbank.forms.api,${base.bank.url}/api/flow/forminstances/)
-Insert into --spring.output.ansi.enabled=always.properties(prop_key,value) values(bankos.clientadapter.tenant.oceanfirstbank.forms.response.api,${base.bank.url}/api/flow/forminstances/corestatusupdate/)

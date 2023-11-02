@@ -22,7 +22,7 @@ import com.opencsv.exceptions.CsvException;
 public class OpenCSVService {
 
 	@Autowired
-	private Environment env;
+	private Environment env1;
 
 	@Autowired
 	OpenCSVApplication openCSVApplication;
@@ -35,11 +35,11 @@ public class OpenCSVService {
 	}
 
 	private String path;
+
 	public ResponseEntity<String> uploadAndSaveCsv(MultipartFile file) {
 		try {
 			String script = csvParsing(file.getInputStream());
-		    path = env.getProperty("csv.file.path", "Not available");
-			System.out.println(path);
+			path = env1.getProperty("csv.file.path", "Not available");
 			return writeScriptToFile(script);
 
 		} catch (IOException e) {
