@@ -1,0 +1,6 @@
+UPDATE uat.properties SET value = '/From Finzly Dev/' WHERE prop_key = 'bankos.clientadapter.tenant.oceanfirstbank.sftp.request.file_dir'
+UPDATE uat.properties SET value = '/To Finzly Dev/' WHERE prop_key = 'bankos.clientadapter.tenant.oceanfirstbank.sftp.respone.file_dir'
+UPDATE uat.properties SET value = 'true' WHERE prop_key = 'bankos.clientadapter.tenant.oceanfirstbank.sftp.is_password_based_authentication'
+UPDATE uat.properties SET value = '/flow' WHERE prop_key = 'bankos.clientadapter.tenant.oceanfirstbank.s3.form.attachment.file_dir'
+UPDATE uat.properties SET value = '${base.bank.url}/api/flow/forminstances/' WHERE prop_key = 'bankos.clientadapter.tenant.oceanfirstbank.forms.api'
+UPDATE uat.properties SET value = '${base.bank.url}/api/flow/forminstances/corestatusupdate/' WHERE prop_key = 'bankos.clientadapter.tenant.oceanfirstbank.forms.response.api'
